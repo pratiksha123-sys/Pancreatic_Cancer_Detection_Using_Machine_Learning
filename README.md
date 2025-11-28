@@ -17,6 +17,17 @@ The system is trained using **Random Forest, XGBoost, and Logistic Regression mo
 
 ---
 
+## 📊 Model Performance
+| Model               | Accuracy   | Precision  | Recall     | F1-Score   |
+| ------------------- | ---------- | ---------- | ---------- | ---------- |
+| Logistic Regression | 62.77%     | 61.55%     | 68.04%     | 64.63%     |
+| Random Forest       | **82.53%** | **81.89%** | **83.52%** | **82.70%** |
+| XGBoost             | 80.01%     | 89.16%     | 68.34%     | 77.37%     |
+
+📌 Best Model: Random Forest (Accuracy: 82.53%)
+
+---
+
 ## 📁 Project Structure
 - `app.py` – Main Flask application  
 - `static/` – CSS, JS, and images  
