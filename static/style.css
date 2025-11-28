@@ -1,0 +1,482 @@
+/* static/style.css */
+
+/* Custom styles for a more attractive and modern look */
+
+/* The font-family 'Poppins' is applied globally in index.html via <style> tag and Google Fonts CDN.
+   Any @apply directives for font-family are removed here to prevent errors. */
+
+/* General button styling */
+button {
+    /* The original @apply transition duration-300 ease-in-out transform;
+       was a PostCSS directive. It's replaced with standard CSS properties. */
+    transition-property: all;
+    transition-duration: 300ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); /* This is 'ease-in-out' */
+}
+
+/* Navigation buttons */
+/* The specific hover effects for nav buttons are now handled by inline styles in index.html,
+   or by Tailwind classes. This empty ruleset is removed. */
+
+
+/* Form input fields */
+/* The styling for input fields is primarily handled by Tailwind classes directly in index.html.
+   This empty ruleset is removed. */
+
+
+/* Specific button styles for better visual appeal */
+/* These are custom background colors that override/complement Tailwind's defaults. */
+/* The hover effects are now handled by gradients and custom classes (btn-glow) in index.html's <style> block. */
+.bg-blue-500 {
+    background-color: #3B82F6;
+}
+.bg-purple-500 {
+    background-color: #9B59B6;
+}
+.bg-green-500 {
+    background-color: #2ECC71;
+}
+/* New colors for the sleek design */
+.bg-indigo-600 {
+    background-color: #4f46e5; /* Tailwind indigo-600 */
+}
+.bg-purple-600 {
+    background-color: #7c3aed; /* Tailwind violet-600 */
+}
+.bg-emerald-500 {
+    background-color: #10b981; /* Tailwind emerald-500 */
+}
+
+
+/* Shadow and rounded corners on main sections */
+/* These are now handled by Tailwind classes directly in index.html.
+   This empty ruleset is removed. */
+
+
+/* Specific styling for the home page buttons */
+/* These are now handled by Tailwind classes directly in index.html.
+   This empty ruleset is removed. */
+
+/* Add spacing below the navbar */
+#auth-section,
+#detection-section,
+#comparison-section,
+#analysis-section {
+    margin-top: 80px; /* You can increase if needed */
+    margin-bottom: 80px;
+}
+
+
+/* Message box styling for success/error messages */
+.message-box {
+    padding: 1rem;
+    margin-top: 1rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.message-box.success {
+    background-color: #D4EDDA;
+    color: #155724;
+    border: 1px solid #C3E6CB;
+}
+
+.message-box.error {
+    background-color: #F8D7DA;
+    color: #721C24;
+    border: 1px solid #F5C6CB;
+}
+
+/* Add the subtle dots pattern background if you want it (requires a base64 SVG or image) */
+/* For simplicity, this is a placeholder. You'd replace 'url(data:image/svg+xml...)'
+   with an actual SVG pattern or remove it if not used. */
+.bg-dots-pattern {
+    background-image: radial-gradient(#e2e8f0 1px, transparent 1px); /* Very subtle light dots */
+    background-size: 20px 20px;
+}
+
+.invisible-box {
+    visibility: hidden; /* hides it but still takes up space */
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Gabarito&family=Inclusive+Sans&family=Inter&family=Montserrat&family=Poppins&family=Raleway&family=Roboto&family=Space+Grotesk&family=Ubuntu&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-transform: capitalize;
+    transition: all 0.5s linear;
+    font-family: 'Courgette', cursive;
+    font-family: 'Gabarito', sans-serif;
+    font-family: 'Inclusive Sans', sans-serif;
+}
+.background{
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(2, 10, 10, 0.57), rgba(2, 10, 10, 0.20)), url("/static/img/pic1.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+.navbar img{
+    width: 80px;
+}
+.navbar-items{
+    flex: 1;
+    text-align: right;
+}
+.navbar{
+    display: flex;
+    padding: 1% 2%;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+.navbar ul li{
+    position: relative;
+    list-style: none;
+    display: inline-block;
+    padding: 1% 2%;
+    font-weight: bold;
+    font-size: 18px;
+}
+.navbar ul li a{
+    text-decoration: none;
+    color: #fff;
+}
+.navbar ul li::after{
+    content: '';
+    height: 2px;
+    width: 0;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+    background-color: #2e6476;
+}
+.navbar ul li:hover::after{
+    width: 100%;
+}
+.burger{
+    display: none;
+}
+/* ___________main */
+.main{
+    height: 85vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.text-box{
+    color: #fff;
+    width: 40%;
+}
+.text-box h1{
+    padding: 2px;
+    font-size: 60px;
+}
+.text-box p{
+    padding: 1% 0;
+}
+.box{
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    background-color: #2e6476;
+    height: 55%;
+    box-shadow: rgba(0,0,0,0.35) 0px 5px 15px;
+    border-radius: 10px;
+}
+.box input{
+    width: 70%;
+    border: none;
+    outline: none;
+    margin: 2% 3%;
+    padding: 3%;
+    border-radius: 5px;
+}
+.box h1{
+    margin-bottom: 3%;
+}
+.btn {
+    background-color: #2e6476;
+    color: #fff;
+    border: 2px solid transparent;
+    padding: 5px 10px;     /* ⬅️ Smaller padding */
+    font-size: 12px;       /* ⬅️ Smaller text */
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn2 {
+    background-color: #fff;
+    color: #2e6476;
+    margin-top: 8px;
+    width: 30%;            /* ⬅️ Narrower width */
+}
+
+.btn2:hover {
+    color: #fff;
+    background-color: #6a8d9a;
+}
+
+/* _________services */
+.services{
+    width: 80%;
+    margin: auto;
+    padding: 2% 0;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.box1{
+    flex-basis: 30%;
+    color: #fff;
+    padding: 2%;
+    margin-bottom: 2%;
+    background-color: #1a92bedb;
+    border-radius: 10px;
+    box-shadow: rgba(0,0,0,0.35) 0px 5px 15px;
+}
+.heading{
+    padding: 2% 0;
+    color: #2e6476;
+    font-size: 40px;
+}
+.box1 i{
+    padding:  5%;
+    background-color: #f8fdff6b;
+    border-radius: 50%;
+    font-size: 20px;
+}
+.box1 h2{
+    padding: 2% 0;
+    font-size: 28px;
+}
+/* ____________quality  */
+.quality{
+    width: 80%;
+    margin: auto;
+}
+.box2,.box3{
+    flex-basis: 29%;
+    text-align: center;
+    padding: 2%;
+    margin: 3% 0;
+}
+.box2 h2{
+    padding: 2% 0;
+    font-size: 29px;
+}
+.box2 i{
+    font-size: 3em;
+    padding-bottom: 2%;
+}
+.quality div :nth-child(1) i{
+    color: #30e430;
+}
+.quality div :nth-child(2) i{
+color: red;
+}
+.quality div :nth-child(3) i{
+color: blue;
+}
+.box2:hover{
+    cursor: pointer;
+    box-shadow: rgba(0,0,0,0.35) 0px 5px 15px;
+    transition: all 0.5s ease-out;
+}
+/* ______________about */
+.about{
+    width: 80%;
+    margin: auto;
+}
+.row1{
+    padding: 2% 0;
+}
+.left{
+    width: 50%;
+}
+.left img{
+    max-width: 100%;
+    height: auto;
+    box-shadow: rgba(0,0,0,0.35) 0px 5px 15px;
+}
+.right{
+    width: 45%;
+}
+.right h1{
+    font-size: 40px;
+}
+.right p{
+    padding: 3% 0;
+}
+.btn3{
+    font-size: 20px;
+}
+.btn3:hover{
+    cursor: pointer;
+    letter-spacing: 1px;
+    transition: all 0.5s linear;
+}
+/* __________departments */
+.department{
+    width: 80%;
+    margin: auto;
+    padding-bottom: 2%;
+}
+.box3{
+    flex-basis:22% ;
+    box-shadow: rgba(0,0,0,0.35) 0px 5px 15px;
+}
+.box3:hover{
+    transform: scale(1.1);
+    background-color: #6a8d9a;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.5s linear;
+}
+/* __________footer */
+footer{
+    background-color: #2e6476;
+    color: #fff;
+}
+.footer-sec{
+    padding: 3% 0;
+    display: flex;
+    width: 90%;
+    margin: auto;
+    justify-content: center;
+}
+.sec{
+    display: flex;
+    flex-basis: 40%;
+}
+.f_box{
+    flex-basis: 50%;
+}
+.f_box h2{
+    padding-bottom: 2%;
+}
+.f_box p{
+    padding: 4px 0;
+}
+.f_box p i{
+    font-size: 23px;
+    padding: 5px 3px;
+    cursor: pointer;
+}
+.para{
+    text-align: center;
+    padding: 12px 0;
+    background-color: #333;
+}
+/* ____________responsiveness */
+@media only screen and (max-width:995px){
+    .box{
+        width: 40%;
+        height: 69%;
+    }
+    .row1{
+        flex-direction: column;
+    }
+    .left{
+        width: 60%;
+    }
+    .right{
+        width: 80%;
+    }
+}
+@media only screen and (max-width:828px){
+    .text-box h1{
+        font-size: 40px;
+    }
+    .footer-sec {
+        width: 100%;
+    }
+}
+@media only screen and (max-width:766px){
+    .navbar ul li{
+        display: block;
+        padding: 2px 0 34px;
+    }
+    .navbar-items{
+        position: absolute;
+        background-color: #2e6476;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: 0;
+        text-align: left;
+        z-index: 2;
+        transition: all 1s ease-out;
+    }
+    .navbar-items ul{
+        padding: 98px 51px 8px 49px;
+    }
+    .burger{
+        display: block;
+        z-index: 3;
+        position: absolute;
+        top: 15px;
+        right: 5%;
+        cursor: pointer;
+        font-size: 33px;
+        color: #fff;
+    }
+    .h-class{
+        height: 100vh;
+        opacity: 0;
+    }
+    .v-class{
+        opacity: 0;
+    }
+    .main{
+        flex-direction: column-reverse;
+    }
+    .text-box{
+        width: 80%;
+    }
+    .box input{
+        width: 85%;
+    }
+    .row,.sec{
+        flex-direction: column;
+    }
+    .box3{
+        width: 90%;
+    }
+    .row,.box1{
+        margin-bottom: 7%;
+    }
+    .box1{
+        padding: 4%;
+    }
+}
+@media only screen and (max-width:570px){
+    .box{
+        width: 68%;
+    }
+    .text-box,.right,.left{
+        width: 95%;
+    }
+    .box h1{
+        padding: 0;
+    }
+    .text-box p{
+        font-size: 12px;
+    }
+    .right p{
+        font-size: 14px;
+    }
+}

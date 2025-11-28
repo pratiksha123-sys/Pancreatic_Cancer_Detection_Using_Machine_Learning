@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>health care</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #ffffff;
+      color: #333;
+      min-height: 100vh;
+    }
+
+    .about-container {
+        padding: 60px 30px;
+        background-color: #f7f2ff;
+        max-width: 1300px;
+        margin: auto;
+    }
+
+    .about-heading {
+        font-size: 2.75rem;
+        text-align: center;
+        color: #230646;
+        margin-bottom: 30px;
+        font-weight: 700;
+    }
+
+    .about-text {
+        font-size: 1.25rem;
+        line-height: 2;
+        color: #333;
+        margin-bottom: 20px;
+        text-align: justify;
+    }
+
+
+    .about-images {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .about-images .image-box {
+        width: 100%;
+        max-width: 900pxx;   /* Increased width */
+        height: 650px;       /* Slightly taller */
+        overflow: hidden;
+        border-radius: 12px;
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .about-images img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    .about-caption {
+      text-align: center;
+      font-weight: 600;
+      margin-top: 10px;
+      color: #444;
+    }
+
+    .faq-section {
+      margin-top: 60px;
+      background-color: #ffffff;
+      padding: 40px;
+      border-top: 2px solid #ccc;
+    }
+
+    .faq-section h2 {
+      text-align: center;
+      color: #0c2d57;
+      font-size: 2.5rem;
+      margin-bottom: 30px;
+    }
+
+    .faq {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .faq-item {
+      margin-bottom: 25px;
+    }
+
+    .faq-item h3 {
+      font-size: 1.5rem;
+      color: #0c2d57;
+      margin-bottom: 10px;
+    }
+
+    .faq-item p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      color: #444;
+    }
+
+    @media (max-width: 768px) {
+      .about-heading {
+        font-size: 2.2rem;
+      }
+
+      .about-text {
+        font-size: 1.1rem;
+        padding: 0 10px;
+      }
+
+      .about-images {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .about-images .image-box {
+        max-width: 90%;
+      }
+
+      .faq-section h2 {
+        font-size: 2rem;
+      }
+
+      .faq-item h3 {
+        font-size: 1.3rem;
+      }
+
+      .faq-item p {
+        font-size: 1rem;
+      }
+    }
+
+    .awareness-section {
+        background-color: white;
+        padding: 60px 30px;
+        width: 100%;
+    }
+
+    .awareness-content {
+        max-width: 1300px;
+        width: 100%;
+        margin: auto;
+    }
+
+    .awareness-content h2 {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #2c3e50;
+    }
+
+    .info-box {
+    background: #f9f9f9;
+    padding: 25px 30px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    .info-box h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #2a2a2a;
+    }
+
+    .info-box p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #444;
+    }
+
+  </style>
+</head>
+<body>
+
+    <div class="about-container" style="background-color: white; padding: 60px 30px; max-width: 1400px; margin:0 auto;">
+    <h1 class="about-heading">Detect Early. Live Strong.</h1>
+
+    <p class="about-text">
+        At <strong>PancreaticGuard</strong>, our mission is to save lives through early detection and awareness of pancreatic cancer. Known as one of the deadliest forms of cancer, it often remains undetected until it's too late. With proactive tools and the right information, we believe early identification can make a life-saving difference.
+    </p>
+
+    <p class="about-text">
+        Our symptom-based assessment tool helps analyze common warning signs such as diabetes, weight loss, jaundice, or a family history of cancer. While it doesn’t replace a doctor, it empowers users with helpful insights to consult medical professionals early—when it matters most.
+    </p>
+
+    <p class="about-text">
+        We’re here to raise awareness and make health guidance more accessible for everyone. By combining medical knowledge, digital tools, and compassionate design, <strong>PancreaticGuard</strong> brings you one step closer to timely screening, informed decisions, and better outcomes. Because when detected early, there’s hope—and hope saves lives.
+    </p>
+    </div>
+
+    <div class="about-images">
+      <div>
+        <div class="image-box">
+          <img src="{{ url_for('static', filename='img/pancreas1.jpg') }}" alt="Pancreas Diagram">
+        </div>
+        <div class="about-caption">Pancreas Diagram</div>
+      </div>
+      <div>
+        <div class="image-box">
+          <img src="{{ url_for('static', filename='img/pancreas2.jpg') }}" alt="Pancreas Location in Body">
+        </div>
+        <div class="about-caption">Pancreas Location in Human Body</div>
+      </div>
+    </div>
+  </div>
+
+  <section class="awareness-section">
+  <div class="awareness-content">
+    <h2>Pancreatic Cancer Awareness</h2>
+
+    <div class="info-box">
+      <h3>What is Pancreatic Cancer?</h3>
+      <p>Pancreatic cancer starts in the tissues of the pancreas, an organ located behind your stomach. It affects how your body digests food and controls blood sugar.</p>
+    </div>
+
+    <div class="info-box">
+      <h3>Common Symptoms</h3>
+      <p>Symptoms can include jaundice (yellowing of the skin), weight loss, back pain, loss of appetite, fatigue, and dark urine. Often symptoms appear late, making early detection crucial.</p>
+    </div>
+
+    <div class="info-box">
+      <h3>Age Group Most Affected</h3>
+      <p>Pancreatic cancer mostly affects people above the age of 50. The risk increases with age, especially after 65.</p>
+    </div>
+
+    <div class="info-box">
+      <h3>Who Is More Affected – Male or Female?</h3>
+      <p>Pancreatic cancer is slightly more common in males than females, although the gap is not large.</p>
+    </div>
+
+    <div class="info-box">
+      <h3>Recovery and Treatment Options</h3>
+      <p>Treatment depends on the stage and includes surgery, chemotherapy, and radiation. Early detection offers a higher chance of recovery.</p>
+    </div>
+
+    <div class="info-box">
+      <h3>Chance of Recovery</h3>
+      <p>If detected early, there’s a 20-30% chance of long-term survival. Late-stage detection reduces survival chances significantly.</p>
+    </div>
+
+    <div class="info-box">
+      <h3>Types of Pancreatic Cancer</h3>
+      <p>
+        <strong>1. Exocrine Tumors:</strong> Most common; affects enzyme-producing cells.<br>
+        <strong>2. Neuroendocrine Tumors:</strong> Less common; slower-growing and often easier to treat.
+      </p>
+    </div>
+
+    <div class="info-box">
+      <h3>What Should You Do?</h3>
+      <p>If you or someone close shows symptoms, consult a doctor immediately. Regular check-ups, healthy diet, avoiding smoking, and awareness are key to prevention and early detection.</p>
+    </div>
+
+  </div>
+</section>
+
+<div style="text-align: center; margin: 40px 0 80px 0;"> 
+  <a href="{{ url_for('index') }}" style="text-decoration: none;">
+    <button style="background-color: #139627; color: white; padding: 12px 25px; border: none; border-radius: 6px; font-size: 16px; cursor: pointer;">
+      Back to Home
+    </button>
+  </a>
+</div>
+
+
+</body>
+</html>
